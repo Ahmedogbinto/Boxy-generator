@@ -1,0 +1,54 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+
+const initialState = [
+    
+    {
+        inputNumber: 1,
+        name: "Border radius",
+        value: 0,
+        type: "range",
+        minMax: [0, 250],
+        slice: "boxProperties"
+    },
+    {
+        inputNumber: 2,
+        name: "Height",
+        value: 250,
+        type: "range",
+        minMax: [0, 250],
+        slice: "boxProperties"
+    },
+    {
+        inputNumber: 3,
+        name: "Width",
+        value: 250,
+        type: "range",
+        minMax: [0, 500],
+        slice: "boxProperties"
+    },
+    {
+        inputNumber: 4,
+        name: "Background color",
+        value: "#fff",
+        type: "color",
+        minMax: [-250, 250],
+        slice: "boxProperties"
+    }
+]
+    
+
+
+export const boxSlice = createSlice({
+    name:"boxProperties",
+    initialState, 
+    reducers: {
+        updataeBoxValue: (state, action) => {
+
+        }
+
+    }
+})
+
+export const {updataeBoxValue} = boxSlice.actions
+export default boxSlice.reducer
