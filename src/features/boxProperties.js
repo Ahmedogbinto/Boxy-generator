@@ -43,12 +43,12 @@ export const boxSlice = createSlice({
     name:"boxProperties",
     initialState, 
     reducers: {
-        updataeBoxValue: (state, action) => {
+        updateBoxValue: (state, action) => {
 
         }
 
     }
 })
 
-export const {updataeBoxValue} = boxSlice.actions
+export const {updateBoxValue} = boxSlice.actions
 export default boxSlice.reducer

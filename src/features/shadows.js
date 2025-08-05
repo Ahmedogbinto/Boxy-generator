@@ -67,5 +67,5 @@ export const shadowSlice = createSlice({
     }
 })
 
-export const {removeShadow, addShadow, updateShadowValue, updateCheckBox} = shadowSlice.action
+export const {removeShadow, addShadow, updateShadowValue, updateCheckBox} = shadowSlice.actions
 export default shadowSlice.reducer
