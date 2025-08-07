@@ -100,7 +100,7 @@ export const shadowSlice = createSlice({
         },
 
         updateShadowValue: (state, action) => {
-            // le shadow actuel
+            // le shadow actuel (retrouver la bonne ombre)
             const currentShadow = state.find(
                 shadow => shadow.id === action.payload.shadowID
             )
@@ -111,12 +111,16 @@ export const shadowSlice = createSlice({
 
             currentInput.value = action.payload.value
         },
-        updateCheckBox: (state, action) => {
-
+        updateCheckbox: (state, action) => {
+            const currentShadow = state.find(
+                shadow => shadow.id === action.payload.shadowID
+            )
+            
+            currentShadow[action.payload.name] = !currentShadow[action.payload.name]
         },
 
     }
 })
 
-export const {removeShadow, addShadow, updateShadowValue, updateCheckBox} = shadowSlice.actions
+export const {removeShadow, addShadow, updateShadowValue, updateCheckbox} = shadowSlice.actions
 export default shadowSlice.reducer
