@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LeftContainer from "./layouts/LeftContainer";
+import Visualization from "./layouts/Visualization/Visualization";
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       </main>
       
       <LeftContainer/>
-      {/* <Visualization/> */}
+      
+      <Visualization/>
 
       <Footer/>
 
